@@ -5,12 +5,12 @@ const Produto = database.define('produto', {
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
-        AllowNull: false,
+        allowNull: false,
         primaryKey: true
     },
     nome: {
         type: Sequelize.STRING,
-        AllowNull: false
+        allowNull: false
     },
     preco: {
         type: Sequelize.DOUBLE

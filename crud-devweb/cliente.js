@@ -1,25 +1,25 @@
 const Sequelize = require('sequelize');
 const database = require('./db');
 
-const Cliente = database.define('produto', {
+const Cliente = database.define('cliente', {
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
-        AllowNull: false,
+        allowNull: false,
         primaryKey: true
     },
     nome: {
         type: Sequelize.STRING,
-        AllowNull: false
+        allowNull: false
     },
     descricao: Sequelize.STRING
 })
 
   try {
-    Produto.sync({ force: true });
+    Cliente.sync({ force: true });
     console.log('Tabela de cliente criada com sucesso!');
   } catch(error) {
     console.error('Erro ao criar tabela de cliente:', error);
   }
 
-module.exports = Produto;
+module.exports = Cliente;
